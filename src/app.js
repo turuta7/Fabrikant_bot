@@ -4,6 +4,7 @@ const fs = require("fs");
 require('dotenv').config();
 
 const { token } = process.env;
+
 console.log(token);
 
 const bot = new TelegramBot(token, { polling: true });
