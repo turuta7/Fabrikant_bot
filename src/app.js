@@ -66,21 +66,31 @@ setInterval(function () {
       bot.sendMessage(id[i], 'Скоро перерыв')
     }
   }
+
   if (time === '9:25') {
     for (let i = 0; i < id.length; i++) {
       bot.sendMessage(id[i], 'Обед через 5 мин.')
     }
   }
+
+  if (time === '9:59') {
+    for (let i = 0; i < id.length; i++) {
+      bot.sendMessage(id[i], 'Уже нужно работать!!!')
+    }
+  }
+
   if (time === '11:28') {
     for (let i = 0; i < id.length; i++) {
       bot.sendMessage(id[i], 'Скоро перерыв')
     }
   }
+
   if (time === '12:58') {
     for (let i = 0; i < id.length; i++) {
       bot.sendMessage(id[i], 'Скоро перерыв')
     }
   }
+
   if (time === '14:00') {
     for (let i = 0; i < id.length; i++) {
       bot.sendMessage(id[i], 'Пора домой')
@@ -91,7 +101,7 @@ setInterval(function () {
 }, 50000);
 
 setInterval(function () {
-  https.get("https://myfirst-telegrambot.herokuapp.com/");
+  https.get("https://fabr-bot.herokuapp.com");
 }, 300000); // every 5 minutes (300000)
 
 
