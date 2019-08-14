@@ -51,13 +51,19 @@ bot.on('message', (msg) => {
 
 
 setInterval(function () {
-  id = unique(fs.readFileSync("test.txt", "utf8").split(' '));
+  id = fs.readFileSync("test.txt", "utf8").split(' ');
 
   const now = new Date();
   time = `${now.getHours()}:${now.getMinutes()}`;
-  if (time === '8:20') {
+  if (time === '8:22') {
     for (let i = 0; i < id.length; i++) {
       bot.sendMessage(id[i], 'test')
+    }
+  }
+
+  if (time === '7:28') {
+    for (let i = 0; i < id.length; i++) {
+      bot.sendMessage(id[i], 'Перерыв через 2 мин.')
     }
   }
   if (time === '9:25') {
