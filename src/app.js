@@ -55,7 +55,7 @@ setInterval(function () {
 
   const now = new Date();
   time = `${now.getHours()}:${now.getMinutes()}`;
-  if (time === '8:22') {
+  if (time === '8:23') {
     for (let i = 0; i < id.length; i++) {
       bot.sendMessage(id[i], 'test')
     }
