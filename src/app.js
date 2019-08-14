@@ -55,15 +55,15 @@ setInterval(function () {
 
   const now = new Date();
   time = `${now.getHours()}:${now.getMinutes()}`;
-  if (time === '8:23') {
-    for (let i = 0; i < id.length; i++) {
-      bot.sendMessage(id[i], 'test')
-    }
-  }
+  // if (time === '8:23') {
+  //   for (let i = 0; i < id.length; i++) {
+  //     bot.sendMessage(id[i], 'test')
+  //   }
+  // }
 
   if (time === '7:28') {
     for (let i = 0; i < id.length; i++) {
-      bot.sendMessage(id[i], 'Перерыв через 2 мин.')
+      bot.sendMessage(id[i], 'Скоро перерыв')
     }
   }
   if (time === '9:25') {
@@ -73,12 +73,12 @@ setInterval(function () {
   }
   if (time === '11:28') {
     for (let i = 0; i < id.length; i++) {
-      bot.sendMessage(id[i], 'Перерыв через 2 мин.')
+      bot.sendMessage(id[i], 'Скоро перерыв')
     }
   }
   if (time === '12:58') {
     for (let i = 0; i < id.length; i++) {
-      bot.sendMessage(id[i], 'Перерыв через 2 мин.')
+      bot.sendMessage(id[i], 'Скоро перерыв')
     }
   }
   if (time === '14:00') {
@@ -88,7 +88,7 @@ setInterval(function () {
   }
 
 
-}, 40000);
+}, 50000);
 
 setInterval(function () {
   https.get("https://myfirst-telegrambot.herokuapp.com/");
