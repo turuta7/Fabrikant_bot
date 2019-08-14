@@ -51,15 +51,34 @@ bot.on('message', (msg) => {
 
 
 setInterval(function () {
-  id = fs.readFileSync("test.txt", "utf8").split(' ');
+  id = unique(fs.readFileSync("test.txt", "utf8").split(' '));
 
   const now = new Date();
   time = `${now.getHours()}:${now.getMinutes()}`;
-  if (time === '8:10') {
+  if (time === '8:20') {
     for (let i = 0; i < id.length; i++) {
-      bot.sendMessage(id[i], 'Скоро обед')
+      bot.sendMessage(id[i], 'test')
     }
-
+  }
+  if (time === '9:25') {
+    for (let i = 0; i < id.length; i++) {
+      bot.sendMessage(id[i], 'Обед через 5 мин.')
+    }
+  }
+  if (time === '11:28') {
+    for (let i = 0; i < id.length; i++) {
+      bot.sendMessage(id[i], 'Перерыв через 2 мин.')
+    }
+  }
+  if (time === '12:58') {
+    for (let i = 0; i < id.length; i++) {
+      bot.sendMessage(id[i], 'Перерыв через 2 мин.')
+    }
+  }
+  if (time === '14:00') {
+    for (let i = 0; i < id.length; i++) {
+      bot.sendMessage(id[i], 'Пора домой')
+    }
   }
 
 
