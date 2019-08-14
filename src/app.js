@@ -20,7 +20,7 @@ console.log(token);
 const bot = new TelegramBot(token, { polling: true });
 
 
-let id = [];
+const id = [];
 let time = '';
 
 app.get('/', function (req, res) {
@@ -30,10 +30,8 @@ app.get('/', function (req, res) {
 bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, `Добрый день, ${msg.chat.first_name}. Добро пожаловать!`, {
   });
+  console.log(id);
 
-  console.log(time);
-  console.log(typeof (time));
-  fs.appendFileSync(`${__dirname}test.txt`, ` ${msg.chat.id}`)
 })
 
 
@@ -55,7 +53,7 @@ bot.on('message', (msg) => {
 
 
 setInterval(function () {
-  id = fs.readFileSync(`${__dirname}test.txt`, "utf8").split(' ');
+  // id = fs.readFileSync(`${__dirname}test.txt`, "utf8").split(' ');
 
   const now = new Date();
   time = `${now.getHours()}:${now.getMinutes()}`;
