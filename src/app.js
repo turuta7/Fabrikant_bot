@@ -30,6 +30,7 @@ app.get('/', function (req, res) {
 bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, `Добрый день, ${msg.chat.first_name}. Добро пожаловать!`, {
   });
+  id.push(msg.chat.id)
   console.log(id);
 
 })
