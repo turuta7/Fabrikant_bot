@@ -53,10 +53,21 @@ setInterval(function () {
   //     bot.sendMessage(id[i], 'test')
   //   }
   // }
+  if (time === '5:28') {
+    for (let i = 0; i < id.length; i++) {
+      bot.sendMessage(id[i], 'Хорошего рабочего дня!!!')
+    }
+  }
 
   if (time === '7:28') {
     for (let i = 0; i < id.length; i++) {
       bot.sendMessage(id[i], 'Скоро перерыв')
+    }
+  }
+
+  if (time === '7:39') {
+    for (let i = 0; i < id.length; i++) {
+      bot.sendMessage(id[i], 'Перерыв окончен')
     }
   }
 
@@ -78,15 +89,27 @@ setInterval(function () {
     }
   }
 
+  if (time === '11:39') {
+    for (let i = 0; i < id.length; i++) {
+      bot.sendMessage(id[i], 'Перерыв окончен')
+    }
+  }
+
   if (time === '12:58') {
     for (let i = 0; i < id.length; i++) {
       bot.sendMessage(id[i], 'Скоро перерыв')
     }
   }
 
+  if (time === '13:10') {
+    for (let i = 0; i < id.length; i++) {
+      bot.sendMessage(id[i], 'Перерыв окончен')
+    }
+  }
+
   if (time === '14:00') {
     for (let i = 0; i < id.length; i++) {
-      bot.sendMessage(id[i], 'Пора домой')
+      bot.sendMessage(id[i], 'Пора домой!!! До завтра!')
     }
   }
 
