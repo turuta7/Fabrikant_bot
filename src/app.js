@@ -52,16 +52,12 @@ bot.on('message', (msg) => {
 
 setInterval(function () {
   id = fs.readFileSync("test.txt", "utf8").split(' ');
-  // 
+
   const now = new Date();
   time = `${now.getHours()}:${now.getMinutes()}`;
-  // console.log(time);  
-  // console.log(time === '0:6');
-  if (time === '1:19') {
-    console.log(id);
-
+  if (time === '8:10') {
     for (let i = 0; i < id.length; i++) {
-      bot.sendMessage(id[i], 'пора спать')
+      bot.sendMessage(id[i], 'Скоро обед')
     }
 
   }
