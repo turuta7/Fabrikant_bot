@@ -29,10 +29,11 @@ app.get('/', function (req, res) {
 })
 
 bot.onText(/\/start/, (msg) => {
+  const id = unique.filter((v, i, a) => a.indexOf(v) === i);
   bot.sendMessage(msg.chat.id, `Добрый день, ${msg.chat.first_name}. Добро пожаловать!`, {
   });
   unique.push(msg.chat.id)
-  console.log(unique);
+  console.log(id);
 
 
 })
