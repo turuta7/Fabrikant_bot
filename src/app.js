@@ -1,5 +1,11 @@
 const TelegramBot = require('node-telegram-bot-api');
+
+const express = require('express');
+
+const app = express();
+
 const fs = require("fs");
+
 
 require('dotenv').config();
 
@@ -13,6 +19,9 @@ const bot = new TelegramBot(token, { polling: true });
 let id = [];
 let time = '';
 
+app.get('/', function (req, res) {
+  res.send('server Work')
+})
 
 bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, `Добрый день, ${msg.chat.first_name}. Добро пожаловать!`, {
@@ -59,3 +68,10 @@ setInterval(function () {
 
 
 }, 40000);
+
+setInterval(function () {
+  https.get("https://myfirst-telegrambot.herokuapp.com/");
+}, 300000); // every 5 minutes (300000)
+
+
+app.listen(process.env.PORT || 3000)
