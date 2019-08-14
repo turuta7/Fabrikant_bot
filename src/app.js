@@ -20,8 +20,9 @@ console.log(token);
 const bot = new TelegramBot(token, { polling: true });
 
 
-const id = [];
+const unique = [];
 let time = '';
+
 
 app.get('/', function (req, res) {
   res.send('server Work')
@@ -30,28 +31,13 @@ app.get('/', function (req, res) {
 bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, `Добрый день, ${msg.chat.first_name}. Добро пожаловать!`, {
   });
-  id.push(msg.chat.id)
-  const unique = id.filter((v, i, a) => a.indexOf(v) === i);
+  unique.push(msg.chat.id)
   console.log(unique);
 
 
 })
 
 
-bot.onText(/\/echo (.+)/, (msg, match) => {
-
-  const chatId = msg.chat.id;
-  const resp = match[1];
-
-  bot.sendMessage(chatId, resp);
-});
-
-
-
-bot.on('message', (msg) => {
-  const chatId = msg.chat.id;
-  bot.sendMessage(chatId, `Received your message${time}`);
-});
 
 
 
@@ -60,6 +46,7 @@ setInterval(function () {
 
   const now = new Date();
   time = `${now.getHours()}:${now.getMinutes()}`;
+  const id = unique.filter((v, i, a) => a.indexOf(v) === i);
   // if (time === '8:23') {
   //   for (let i = 0; i < id.length; i++) {
   //     bot.sendMessage(id[i], 'test')
