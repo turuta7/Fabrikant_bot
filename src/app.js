@@ -31,7 +31,9 @@ bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, `Добрый день, ${msg.chat.first_name}. Добро пожаловать!`, {
   });
   id.push(msg.chat.id)
-  console.log(id);
+  const unique = id.filter((v, i, a) => a.indexOf(v) === i);
+  console.log(unique);
+
 
 })
 
