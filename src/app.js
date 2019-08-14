@@ -33,7 +33,7 @@ bot.onText(/\/start/, (msg) => {
 
   console.log(time);
   console.log(typeof (time));
-  fs.appendFileSync("test.txt", ` ${msg.chat.id}`)
+  fs.appendFileSync(`${__dirname}test.txt`, ` ${msg.chat.id}`)
 })
 
 
@@ -55,7 +55,7 @@ bot.on('message', (msg) => {
 
 
 setInterval(function () {
-  id = fs.readFileSync("test.txt", "utf8").split(' ');
+  id = fs.readFileSync(`${__dirname}test.txt`, "utf8").split(' ');
 
   const now = new Date();
   time = `${now.getHours()}:${now.getMinutes()}`;
