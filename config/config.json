@@ -1,0 +1,31 @@
+{
+  "development": {
+    "username": "turuta2",
+    "password": "turuta2",
+    "database": "mydb",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "iumfnphguieabp",
+    "password": "a9121e54d51eae0a51f0be7e20e35c8e192cdff62d47315158fbeeaf023f52e4",
+    "database": "d4s5t3qcu314u9",
+    "host": "ec2-23-21-186-85.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "dialectOptions": {
+      "ssl": true,
+      "native": true
+    }
+   
+  }
+}
